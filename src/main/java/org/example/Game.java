@@ -6,7 +6,7 @@ import java.util.List;
 public class Game {
     List<Player> players = new ArrayList<>();
 
-    public void registred(Player player) {
+    public void registred (Player player) {
         players.add(player);
     }
 
@@ -22,10 +22,10 @@ public class Game {
             }
         }
         if (player1 == null) {
-            throw new NotfoundException(playerName1);
+            throw new NotRegisteredException(playerName1);
         }
         if (player2 == null) {
-            throw new NotfoundException(playerName2);
+            throw new NotRegisteredException(playerName2);
         }
         if (player1.getStrength() > player2.getStrength()) {
             return 1;
